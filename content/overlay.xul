@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<overlay id="HTMLtoolbox" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script type="application/x-javascript" src="chrome://HTMLtoolbox/content/overlay.js" />
+
+   <!-- <commandset id="allcommands">
+	  <command id="Tasks:SassCompileFile" oncommand="extensions.HTMLtoolbox.compileFile(true);"/>
+      <command id="Tasks:SassCompileBuffer" oncommand="extensions.HTMLtoolbox.compileBuffer();"/>
+      <command id="Tasks:SassCompileSelection" oncommand="extensions.HTMLtoolbox.compileSelection();"/>
+	  <command id="Tasks:SassCompileFileCompress" oncommand="extensions.HTMLtoolbox.compileCompressFile(true);"/>
+      <command id="Tasks:SassCompileBufferCompress" oncommand="extensions.HTMLtoolbox.compileCompressBuffer();"/>
+      <command id="Tasks:SassCompileSelectionCompress" oncommand="extensions.HTMLtoolbox.compileCompressSelection();"/>
+	  <command id="Tasks:SassEnableFileWatcher" oncommand="extensions.HTMLtoolbox.enableFileWatcher();"/>
+	  <command id="Tasks:SassDisableFileWatcher" oncommand="extensions.HTMLtoolbox.disableFileWatcher();"/>
+	  <command id="Tasks:SassCollectVars" oncommand="extensions.HTMLtoolbox.getVars();"/>
+    </commandset>-->
+
+
+    <menupopup id="popup_tools">
+      <menu id="menu_HTMLtoolbox" label="HTML toolbox">
+        <menupopup id="menu_HTMLt_popup">
+          <menuitem id="menu_HTMLt_file"
+                  label="special char"
+                  observes="Tasks:SassCompileFile"
+                  class="menu-iconic-wide" />
+         <!-- <menuitem id="menu_sass_buffer"
+                  label="Compile Current Buffer into CSS"
+                  observes="Tasks:SassCompileBuffer"
+                  class="menu-iconic-wide" />
+          <menuitem id="menu_sass_selection"
+                  label="Compile Selection into CSS"
+                  observes="Tasks:SassCompileSelection"
+                  class="menu-iconic-wide" />
+		  <menuseparator />
+		  <menuitem id="menu_sass_file_compress"
+                  label="Compile and Compress Saved File into CSS"
+                  observes="Tasks:SassCompileFileCompress"
+                  class="menu-iconic-wide" />
+		  <menuitem id="menu_sass_buffer_compress"
+                  label="Compile and Compress Current Buffer into CSS"
+                  observes="Tasks:SassCompileBufferCompress"
+                  class="menu-iconic-wide" />
+		  <menuitem id="menu_sass_selection_compress"
+                  label="Compile and Compress Selection into CSS"
+                  observes="Tasks:SassCompileSelectionCompress"
+                  class="menu-iconic-wide" />
+		   <menuitem id="menu_sass_get_vars"
+                  label="Collect @vars"
+                  observes="Tasks:SassCollectVars"
+                  class="menu-iconic-wide" />
+		  <menu id="sass_filewatcher" label="File Watcher">
+			<menupopup id="sass_filewatcer_popup">
+				<menuitem id="sass_filewatcher_enable"
+					label="Enable File Watcher for current file"
+					observes="Tasks:SassEnableFileWatcher"
+					class="menu-iconic-wide">
+				</menuitem>
+				<menuitem id="sass_filewatcher_disable"
+					label="Disable File Watcher"
+					observes="Tasks:SassDisableFileWatcher"
+					class="menu-iconic-wide">
+				</menuitem>
+			</menupopup>
+		  </menu>-->
+        </menupopup>
+      </menu>
+    </menupopup>
+	
+	<ko-pane id="workspace_right_area">
+    <browser type="ko-widget" id="HTMLtoolboxViewbox" label="HTML toolbox"
+             position="10" insertbefore="codebrowserviewbox"
+             tab_oncommand=""
+             tab_onfocus=""
+	         src="chrome://HTMLtoolbox/content/panel.xul"/>
+  </ko-pane>
+	
+	
+
+   <!-- <menupopup id="editorContextMenu">
+      <menu id="menu_sass_context" label="SASS">
+          <menupopup id="menu_sass_context_popup">
+            <menuitem id="menu_sass_context_file"
+                    label="Compile Saved File into CSS"
+                    observes="Tasks:SassCompileFile"
+                    class="menu-iconic-wide" />
+            <menuitem id="menu_sass_context_buffer"
+                    label="Compile Current Buffer into CSS"
+                    observes="Tasks:SassCompileBuffer"
+                    class="menu-iconic-wide" />
+            <menuitem id="menu_sass_context_selection"
+                    label="Compile Selection into CSS"
+                    observes="Tasks:SassCompileSelection"
+                    class="menu-iconic-wide" />
+			<menuseparator />
+			<menuitem id="menu_sass_context_file_compress"
+                  label="Compile and Compress Saved File into CSS"
+                  observes="Tasks:SassCompileFileCompress"
+                  class="menu-iconic-wide" />
+			<menuitem id="menu_sass_context_buffer_compress"
+                  label="Compile and Compress Current Buffer into CSS"
+                  observes="Tasks:SassCompileBufferCompress"
+                  class="menu-iconic-wide" />
+			<menuitem id="menu_sass_context_selection_compress"
+                  label="Compile and Compress Selection into CSS"
+                  observes="Tasks:SassCompileSelectionCompress"
+                  class="menu-iconic-wide" />
+			<menuitem id="menu_sass_context_get_vars"
+                  label="Collect @vars"
+                  observes="Tasks:SassCollectVars"
+                  class="menu-iconic-wide" />
+			 <menu id="menu_sass_context_filewatcher" label="File Watcher">
+				<menupopup id="menu_sass_context_filewatcer_popup">
+					<menuitem id="menu_sass_context_filewatcher_enable"
+						label="Enable File Watcher for current file"
+						observes="Tasks:SassEnableFileWatcher"
+						class="menu-iconic-wide">
+					</menuitem>
+					<menuitem id="menu_sass_context_filewatcher_disable"
+						label="Disable File Watcher"
+						observes="Tasks:SassDisableFileWatcher"
+						class="menu-iconic-wide">
+					</menuitem>
+				</menupopup>
+			  </menu>
+          </menupopup>
+      </menu>
+    </menupopup>-->
+</overlay>

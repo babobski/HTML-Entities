@@ -1,0 +1,4 @@
+content HTMLtoolbox content/
+overlay chrome://komodo/content/komodo.xul chrome://HTMLtoolbox/content/overlay.xul
+#overlay chrome://komodo/content/pref/pref-html.xul chrome://HTMLtoolbox/content/pref-overlay.xul
+skin HTMLtoolbox classic/1.0 skin/

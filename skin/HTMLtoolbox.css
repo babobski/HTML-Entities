@@ -1,0 +1,52 @@
+.html_entity-clear {
+	clear: both;
+}
+
+.html_entity-box_title {
+	display: block;
+	padding-bottom: 5px;
+	font-weight: bold;
+	padding: 10px 4px 2px;
+}
+
+.html_entity-box_wrapper {
+	padding: 0 4px;
+}
+
+.html_entity-box_wrapper,
+.html_entity-box_title {
+	display: block;
+	width: 100%;
+	clear: both;
+	float: left;
+}
+
+.html_entity-item {
+	height: 24px;
+	width: 24px;
+	border: 1px solid rgba(0, 0, 0, 0.4);
+	display: inline-block;
+	text-align: center;
+	padding: 3px;
+	margin: 1px;
+	font-size: 15px;
+	line-height: 24px;
+	transition: all 200ms ease;
+}
+
+.html_entity-item.shy {
+	font-size: 13px;
+}
+
+.html_entity-item:hover {
+	background: rgba(0, 0, 0, 0.4);
+	color: white;
+	border: 1px solid rgba(0, 0, 0, 0.4);
+	cursor: pointer;
+}
+
+
+#HTMLtoolbox-first-tabpanel-vbox {
+	overflow: auto;
+}
+
