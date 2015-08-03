@@ -47,7 +47,7 @@
 	<tabbox id="tablist" flex="1">
 		<tabs>
 			<tab label="HTML Special Chars" />
-			<tab label="Color functions" />
+			<tab label="Image functions" />
 		</tabs>
 
 		<tabpanels flex="1">
@@ -288,8 +288,12 @@
 					</html:div>
 				</vbox>
 			</tabpanel>
-			<tabpanel id="nextPanel">
-
+			<tabpanel id="nextPanel" flex="1">
+				<vbox align="left" flex="1">
+					<label control="image_path" value="image path"/>
+					<textbox id="image_path"/>
+					<button id="save_image_path" onclick="saveImagePath()" label="Save"/>
+				</vbox>
 			</tabpanel>
 		</tabpanels>
 	</tabbox>

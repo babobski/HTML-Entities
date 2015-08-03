@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay PUBLIC "-//MOZILLA//DTD XUL V1.0//EN" "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<overlay id="HTMLtoolboxCommandOverlay"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+		 
+   <broadcasterset id="broadcasterset_global">
+      <broadcaster
+        id="cmd_HTMLtoolbox_insert_image_path"
+        key="key_cmd_HTMLtoolbox_insert_image_path"
+        desc="HTML toolbox: Insert image path"
+        oncommand="insertImagePath();"/>
+    
+   </broadcasterset>
+
+</overlay>

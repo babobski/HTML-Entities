@@ -44,4 +44,21 @@ if (typeof(extensions.HTMLtoolbox) === 'undefined') extensions.HTMLtoolbox = { v
 		}
 	}
 	
+	saveImagePath = function(){
+		var input = document.getElementById('image_path').value;
+		
+		if (input.length > 0) {
+			prefs.setCharPref('imagePath', input);
+		}
+	}
+	
+	insertImagePath = function(){
+		var imagePath = prefs.getCharPref('imagePath');
+		var scimoz = ko.views.manager.currentView.scimoz;
+		 scimoz.insertText(scimoz.currentPos ,imagePath);
+		 scimoz.gotoPos(scimoz.currentPos + imagePath.length);
+	}
+	
+	
+	
 }).apply(extensions.HTMLtoolbox);
