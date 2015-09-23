@@ -1,7 +1,7 @@
-# HTML Entities
-HTML Entities side panel for komodo edit / ide
+# HTML Entities Pane
+HTML Entities side pane for komodo edit / ide
 
-ads a side panel to komdo edit for easy insertion for HTML Entities
+ads a side pane to komdo edit for easy insertion for HTML Entities
 
 ## Screenshot
 <img src="screenshot.png" alt="screenshot">
