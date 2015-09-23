@@ -22,14 +22,14 @@ if (typeof(extensions.HTMLtoolbox) === 'undefined') extensions.HTMLtoolbox = { v
 			entity = '&' + v_string + ';';
 		} else {
 			entity = '&#' + v_integer + ';';
-		}
+		} 
 		
 	 try {
 		var scimoz = ko.views.manager.currentView.scimoz;
 		 scimoz.insertText(scimoz.currentPos ,entity);
 		 scimoz.gotoPos(scimoz.currentPos + entity.length);
 	 } catch(ex) {
-		 alert(ex);
+		 alert(ex); 
 	 }
 	
 	}

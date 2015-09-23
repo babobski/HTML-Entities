@@ -4,9 +4,9 @@
     <Description about="urn:mozilla:install-manifest">
 <em:unpack>true</em:unpack>
         <em:id>HTMLtoolbox@babobski.com</em:id>
-        <em:name>HTML Toolbox</em:name>
+        <em:name>HTML Entities</em:name>
         <em:version>2.5.0</em:version>
-        <em:description>A HtTML toolbox, with various tools</em:description>
+        <em:description>HTML Entities side panel</em:description>
         <em:creator>Bob de Haas</em:creator>
 		<!--<em:iconURL>chrome://HTMLtoolbox/content/komodo-HTMLtoolbox.png</em:iconURL>-->
         <em:homepageURL></em:homepageURL>

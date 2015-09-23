@@ -1,4 +1,7 @@
-# HTML-toolbox
-HTML toolbox for komodo edit / ide
+# HTML Entities
+HTML Entities side panel for komodo edit / ide
 
-not finishd
+ads a side panel to komdo edit for easy insertion for HTML Entities
+
+## Screenshot
+<img src="screenshot.png" alt="screenshot">
