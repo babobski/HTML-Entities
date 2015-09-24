@@ -135,7 +135,7 @@
 			<html:a class="html_entity-item" tooltiptext="upper-case 'U' with circumflex" onclick="html_entity_insert('Ucirc',219);">Û</html:a>
 			<html:a class="html_entity-item" tooltiptext="lower-case 'u' with diaeresis/umlaut" onclick="html_entity_insert('uuml',252);">ü</html:a>
 			<html:a class="html_entity-item" tooltiptext="upper-case 'U' with diaeresis/umlaut" onclick="html_entity_insert('Uuml',220);">Ü</html:a>
-			<html:a class="html_entity-item" tooltiptext="upper-case 'y' with diaeresis/umlaut" onclick="html_entity_insert('szlig',223);">ÿ</html:a>
+			<html:a class="html_entity-item" tooltiptext="upper-case 'y' with diaeresis/umlaut" onclick="html_entity_insert('yuml',223);">ÿ</html:a>
 		</html:div>
 
 		<html:div class="html_entity-box_title">currency</html:div>

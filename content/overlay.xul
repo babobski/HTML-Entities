@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <overlay id="HTMLtoolbox" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 	<script type="application/x-javascript" src="chrome://HTMLtoolbox/content/overlay.js" />
+	
+	<commandset id="allcommands">
+	  <command id="Tasks:ReplaceEnteties" oncommand="extensions.HTMLtoolbox.replaceEnteties();"/>
+    </commandset>
 
     <menupopup id="popup_tools">
       <menu id="menu_HTMLtoolbox" label="HTML Entities">
         <menupopup id="menu_HTMLt_popup">
           <menuitem id="menu_HTMLt_file"
-                  label="special char"
-                  observes="Tasks:SassCompileFile"
+                  label="Replace HTML Entities in selection"
+                  observes="Tasks:ReplaceEnteties"
                   class="menu-iconic-wide" />
         </menupopup>
       </menu>
