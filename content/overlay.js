@@ -25,9 +25,13 @@ if (typeof(extensions.HTMLtoolbox) === 'undefined') extensions.HTMLtoolbox = { v
 		} 
 		
 	 try {
+		if (ko.views.manager.currentView == undefined) {
+			return;
+		}
 		var scimoz = ko.views.manager.currentView.scimoz;
 		 scimoz.insertText(scimoz.currentPos ,entity);
 		 scimoz.gotoPos(scimoz.currentPos + entity.length);
+		 ko.views.manager.currentView.setFocus();
 	 } catch(ex) {
 		 alert(ex); 
 	 }
@@ -35,6 +39,9 @@ if (typeof(extensions.HTMLtoolbox) === 'undefined') extensions.HTMLtoolbox = { v
 	}
 	
 	this.replaceEnteties = function(){
+		if (ko.views.manager.currentView == undefined) {
+			return;
+		}
 		var scimoz = ko.views.manager.currentView.scimoz;
 		var selection = scimoz.selText;
 		var output = '';
@@ -46,6 +53,7 @@ if (typeof(extensions.HTMLtoolbox) === 'undefined') extensions.HTMLtoolbox = { v
 		output = decodeHTMLEntities(selection);
 		
 		scimoz.replaceSel(output);
+		ko.views.manager.currentView.setFocus();
 	}
 	
 	NumberOrName = function(){
@@ -75,6 +83,7 @@ if (typeof(extensions.HTMLtoolbox) === 'undefined') extensions.HTMLtoolbox = { v
 	
 	decodeHTMLEntities = function(text) {
 		var entities = [
+			['&', '&amp;'],
 			['‘', '&lsquo;'],
 			['’', '&rsquo;'],
 			['‚', '&sbquo;'],
@@ -92,7 +101,6 @@ if (typeof(extensions.HTMLtoolbox) === 'undefined') extensions.HTMLtoolbox = { v
 			['<', '&lt;'],
 			['>', '&gt;'],
 			['"', '&quot;'],
-			['&', '&amp;'],
 			['á', '&aacute;'],
 			['Á', '&Aacute;'],
 			['à', '&agrave;'],

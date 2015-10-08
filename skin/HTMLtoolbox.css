@@ -21,28 +21,28 @@
 	float: left;
 }
 
-.html_entity-item {
-	height: 24px;
-	width: 24px;
-	border: 1px solid rgba(0, 0, 0, 0.4);
+.html_entity-box_wrapper .html_entity-item {
+	height: 30px;
+	width: 30px;
+	min-width: 30px;
+	min-height: 30px;
 	display: inline-block;
 	text-align: center;
 	padding: 3px;
-	margin: 1px;
+	margin: 3px;
 	font-size: 15px;
-	line-height: 24px;
+	line-height: 12px;
 	transition: all 200ms ease;
+    border-radius: 0 !important;
 }
 
-.html_entity-item.shy {
-	font-size: 13px;
+.html_entity-box_wrapper .html_entity-item.transparent {
+	color: transparent !important;
+	text-shadow: none !important;
 }
 
-.html_entity-item:hover {
-	background: rgba(0, 0, 0, 0.4);
-	color: white;
-	border: 1px solid rgba(0, 0, 0, 0.4);
-	cursor: pointer;
+.html_entity-box_wrapper .html_entity-item.shy {
+	font-size: 8px;
 }
 
 
