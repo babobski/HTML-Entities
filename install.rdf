@@ -8,7 +8,7 @@
         <em:version>1.2</em:version>
         <em:description>HTML Entities side panel</em:description>
         <em:creator>Bob de Haas</em:creator>
-		<!--<em:iconURL>chrome://HTMLtoolbox/content/komodo-HTMLtoolbox.png</em:iconURL>-->
+		<em:iconURL>chrome://HTMLtoolbox/content/html-entities-icon.png</em:iconURL>
         <em:homepageURL></em:homepageURL>
         <em:type>2</em:type> <!-- type=extension -->
 
