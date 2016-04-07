@@ -140,6 +140,7 @@
 
 		<html:div class="html_entity-box_title">currency</html:div>
 		<html:div class="html_entity-box_wrapper">
+			<button class="html_entity-item" tooltiptext="dollar" onclick="html_entity_insert('dollar',36);" label="$"/>
 			<button class="html_entity-item" tooltiptext="cent" onclick="html_entity_insert('cent',162);" label="¢"/>
 			<button class="html_entity-item" tooltiptext="pound" onclick="html_entity_insert('pound',163);" label="£"/>
 			<button class="html_entity-item" tooltiptext="yen" onclick="html_entity_insert('yen',165);" label="¥"/>
@@ -151,6 +152,7 @@
 		<html:div class="html_entity-box_wrapper">
 			<button class="html_entity-item" tooltiptext="copyright" onclick="html_entity_insert('copy',169);" label="©"/>
 			<button class="html_entity-item" tooltiptext="registered trademark" onclick="html_entity_insert('reg',174);" label="®"/>
+			<button class="html_entity-item" tooltiptext="At Sign" onclick="html_entity_insert('commat',64);" label="@"/>
 			<button class="html_entity-item" tooltiptext="trademark" onclick="html_entity_insert('trade',8482);" label="™"/>
 			<button class="html_entity-item" tooltiptext="section" onclick="html_entity_insert('sect',167);" label="§"/>
 			<button class="html_entity-item" tooltiptext="broken vertical bar" onclick="html_entity_insert('brvbar',166);" label="¦"/>
@@ -175,8 +177,12 @@
 			<button class="html_entity-item" tooltiptext="superscript 1" onclick="html_entity_insert('sup1',185);" label="¹"/>
 			<button class="html_entity-item" tooltiptext="superscript 2" onclick="html_entity_insert('sup2',178);" label="²"/>
 			<button class="html_entity-item" tooltiptext="superscript 3" onclick="html_entity_insert('sup3',179);" label="³"/>
+			<button class="html_entity-item" tooltiptext="fraction 1/6" onclick="html_entity_insert('frac16',8533);" label="⅙"/>
+			<button class="html_entity-item" tooltiptext="fraction 1/5" onclick="html_entity_insert('frac15',8533);" label="⅕"/>
 			<button class="html_entity-item" tooltiptext="fraction 1/4" onclick="html_entity_insert('frac14',188);" label="¼"/>
+			<button class="html_entity-item" tooltiptext="fraction 1/3" onclick="html_entity_insert('frac13',8531);" label="⅓"/>
 			<button class="html_entity-item" tooltiptext="fraction 1/2" onclick="html_entity_insert('frac12',189);" label="½"/>
+			<button class="html_entity-item" tooltiptext="fraction 2/3" onclick="html_entity_insert('frac23',8532);" label="⅔"/>
 			<button class="html_entity-item" tooltiptext="fraction 3/4" onclick="html_entity_insert('frac34',190);" label="¾"/>
 			<button class="html_entity-item" tooltiptext="multiplication" onclick="html_entity_insert('times',215);" label="×"/>
 			<button class="html_entity-item" tooltiptext="division" onclick="html_entity_insert('divide',247);" label="÷"/>
@@ -194,6 +200,9 @@
 			<button class="html_entity-item" tooltiptext="rightwards arrow" onclick="html_entity_insert('rarr',8594);" label="→"/>
 			<button class="html_entity-item" tooltiptext="downwards arrow" onclick="html_entity_insert('darr',8595);" label="↓"/>
 			<button class="html_entity-item" tooltiptext="left right arrow" onclick="html_entity_insert('harr',8596);" label="↔"/>
+			<button class="html_entity-item" tooltiptext="up down arrow" onclick="html_entity_insert('varr',8597);" label="↕"/>
+			<button class="html_entity-item" tooltiptext="circle arrow" onclick="html_entity_insert('olarr',8634);" label="↺"/>
+			<button class="html_entity-item" tooltiptext="circle arrow inverse" onclick="html_entity_insert('orarr',8635);" label="↻"/>
 			<button class="html_entity-item" tooltiptext="partial differential" onclick="html_entity_insert('part',8706);" label="∂"/>
 			<button class="html_entity-item" tooltiptext="n-ary product (product sign)" onclick="html_entity_insert('prod',8719);" label="∏"/>
 			<button class="html_entity-item" tooltiptext="n-ary summation" onclick="html_entity_insert('sum',8721);" label="∑"/>
@@ -213,6 +222,17 @@
 			<button class="html_entity-item" tooltiptext="black spade suit" onclick="html_entity_insert('spades',9824);" label="♠"/>
 			<button class="html_entity-item" tooltiptext="black diamond suit" onclick="html_entity_insert('diams',9830);" label="♦"/>
 			<button class="html_entity-item" tooltiptext="black club suit (shamrock)" onclick="html_entity_insert('clubs',9827);" label="♣"/>
+			<button class="html_entity-item" tooltiptext="magnifier" onclick="html_entity_insert('telrec',8981);" label="⌕"/>
+			<button class="html_entity-item" tooltiptext="Target" onclick="html_entity_insert('target',8982);" label="⌖"/>
+			<button class="html_entity-item" tooltiptext="Phone" onclick="html_entity_insert('phone',9742);" label="☎"/>
+			<button class="html_entity-item" tooltiptext="Female" onclick="html_entity_insert('female',9742);" label="♀"/>
+			<button class="html_entity-item" tooltiptext="Male" onclick="html_entity_insert('male',9742);" label="♂"/>
+			<button class="html_entity-item" tooltiptext="Star" onclick="html_entity_insert('bigstar',9733);" label="★"/>
+			<button class="html_entity-item" tooltiptext="Star outline" onclick="html_entity_insert('star',9742);" label="☆"/>
+			<button class="html_entity-item" tooltiptext="Music note" onclick="html_entity_insert('sung',9834);" label="♪"/>
+			<button class="html_entity-item" tooltiptext="Hash" onclick="html_entity_insert('sharp',9839);" label="♯"/>
+			<button class="html_entity-item" tooltiptext="Check" onclick="html_entity_insert('check',9742);" label="✓"/>
+			<button class="html_entity-item" tooltiptext="Cross" onclick="html_entity_insert('cross',10007);" label="✗"/>
 		</html:div>
 
 		<html:div class="html_entity-box_title">Greek</html:div>

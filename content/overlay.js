@@ -2,7 +2,7 @@
  * Namespaces
  */
 if (typeof(extensions) === 'undefined') extensions = {};
-if (typeof(extensions.HTMLtoolbox) === 'undefined') extensions.HTMLtoolbox = { version : '2.5.0' };
+if (typeof(extensions.HTMLtoolbox) === 'undefined') extensions.HTMLtoolbox = { version : '1.4.0' };
 
 (function() {
 	var self = this,
@@ -161,8 +161,10 @@ if (typeof(extensions.HTMLtoolbox) === 'undefined') extensions.HTMLtoolbox = { v
 			['£', '&pound;'],
 			['¥', '&yen;'],
 			['€', '&euro;'],
+			['$', '&dollar;'],
 			['©', '&copy;'],
 			['®', '&reg;'],
+			['@', '&commat;'],
 			['™', '&trade;'],
 			['§', '&sect;'],
 			['¦', '&brvbar;'],
@@ -188,7 +190,18 @@ if (typeof(extensions.HTMLtoolbox) === 'undefined') extensions.HTMLtoolbox = { v
 			['¼', '&frac14;'],
 			['½', '&frac12;'],
 			['¾', '&frac34;'],
+			['⅙', '&frac16;'],
+			['⅕', '&frac15;'],
+			['⅓', '&frac13;'],
+			['⅔', '&frac23;'],
 			['×', '&times;'],
+			['☎', '&phone;'],
+			['♀', '&female;'],
+			['♂', '&male;'],
+			['★', '&bigstar;'],
+			['☆', '&star;'],
+			['⌖', '&target;'],
+			['⌕', '&telrec;'],
 			['÷', '&divide;'],
 			['ƒ', '&fnof;'],
 			['ˆ', '&circ;'],
@@ -205,6 +218,8 @@ if (typeof(extensions.HTMLtoolbox) === 'undefined') extensions.HTMLtoolbox = { v
 			['↓', '&darr;'],
 			['↔', '&harr;'],
 			['↕', '&varr;'],
+			['↺', '&olarr;'],
+			['↻', '&orarr;'],
 			['∂', '&part;'],
 			['∏', '&prod;'],
 			['∑', '&sum;'],
@@ -212,6 +227,10 @@ if (typeof(extensions.HTMLtoolbox) === 'undefined') extensions.HTMLtoolbox = { v
 			['√', '&radic;'],
 			['∞', '&infin;'],
 			['∩', '&cap;'],
+			['♪', '&sung;'],
+			['♯', '&sharp;'],
+			['✓', '&check;'],
+			['✗', '&cross;'],
 			['∫', '&int;'],
 			['≈', '&asymp;'],
 			['≠', '&ne;'],
