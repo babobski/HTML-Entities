@@ -2,7 +2,7 @@
  * Namespaces
  */
 if (typeof(extensions) === 'undefined') extensions = {};
-if (typeof(extensions.HTMLtoolbox) === 'undefined') extensions.HTMLtoolbox = { version : '1.4' };
+if (typeof(extensions.HTMLtoolbox) === 'undefined') extensions.HTMLtoolbox = { version : '1.5' };
 
 (function() {
 	var self = this,
@@ -161,7 +161,6 @@ if (typeof(extensions.HTMLtoolbox) === 'undefined') extensions.HTMLtoolbox = { v
 			['£', '&pound;'],
 			['¥', '&yen;'],
 			['€', '&euro;'],
-			['$', '&dollar;'],
 			['©', '&copy;'],
 			['®', '&reg;'],
 			['@', '&commat;'],
