@@ -8,12 +8,6 @@ if (typeof(extensions.HTMLtoolbox) === 'undefined') extensions.HTMLtoolbox = { v
 	var self = this,
 		prefs = Components.classes["@mozilla.org/preferences-service;1"]
         .getService(Components.interfaces.nsIPrefService).getBranch("extensions.HTMLtoolbox.");
-		
-	if (!('HTMLtoolbox' in ko)) ko.extensions = {}; 
-	var myExt = "HTMLtoolbox@babobski.com" ; 
-	if (!(myExt in ko.extensions)) ko.extensions[myExt] = {};
-	if (!('myapp' in ko.extensions[myExt])) ko.extensions[myExt].myapp = {};
-	var HTMLtData = ko.extensions[myExt].myapp;
 	
 	html_entity_insert = function(v_string, v_integer){
 		var is_number = prefs.getBoolPref('useNumber') || false;
