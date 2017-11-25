@@ -2,34 +2,39 @@
  * Namespaces
  */
 if (typeof(extensions) === 'undefined') extensions = {};
-if (typeof(extensions.HTMLtoolbox) === 'undefined') extensions.HTMLtoolbox = { version : '1.7' };
+if (typeof(extensions.HTMLtoolbox) === 'undefined') extensions.HTMLtoolbox = { version : '1.8' };
 
 (function() {
 	var self = this,
 		prefs = Components.classes["@mozilla.org/preferences-service;1"]
         .getService(Components.interfaces.nsIPrefService).getBranch("extensions.HTMLtoolbox.");
 	
-	html_entity_insert = function(v_string, v_integer){
+	html_entity_insert = function(v_string, v_integer) {
 		var is_number = prefs.getBoolPref('useNumber') || false;
-	
+
 		if (is_number == false) {
 			entity = '&' + v_string + ';';
 		} else {
 			entity = '&#' + v_integer + ';';
-		} 
-		
-	 try {
-		if (ko.views.manager.currentView == undefined) {
-			return;
 		}
-		var scimoz = ko.views.manager.currentView.scimoz;
-		 scimoz.insertText(scimoz.currentPos ,entity);
-		 scimoz.gotoPos(scimoz.currentPos + entity.length);
-		 ko.views.manager.currentView.setFocus();
-	 } catch(ex) {
-		 alert(ex); 
-	 }
-	
+
+		try {
+			var scimoz = ko.views.manager.currentView.scimoz;
+			if (scimoz == undefined) {
+				return;
+			}
+
+			if (scimoz.selText.length > 0) {
+				scimoz.replaceSel(entity);
+			} else {
+				scimoz.insertText(scimoz.currentPos, entity);
+				scimoz.gotoPos(scimoz.currentPos + entity.length);
+			}
+			ko.views.manager.currentView.setFocus();
+		} catch (ex) {
+			alert(ex);
+		}
+
 	}
 	
 	this.replaceEnteties = function(){
@@ -58,6 +63,12 @@ if (typeof(extensions.HTMLtoolbox) === 'undefined') extensions.HTMLtoolbox = { v
 		} else {
 			prefs.setBoolPref('useNumber', false);
 		}
+	}
+	
+	setPrefEntities = function() {
+		var checked = prefs.getBoolPref('useNumber');
+		
+		document.getElementById('html_entity-number-button').checked = checked;
 	}
 	
 	saveImagePath = function(){

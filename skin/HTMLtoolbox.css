@@ -21,19 +21,22 @@
 	float: left;
 }
 
-.html_entity-box_wrapper .html_entity-item {
-	height: 30px;
-	width: 30px;
-	min-width: 30px;
-	min-height: 30px;
+.html_entity-box_wrapper:not(button) > button:not(.button-toolbar-a):not(.unstyled):not(.spinbuttons-button).html_entity-item {
+	height: 33px;
+	width: 33px;
+	min-width: 33px;
+	min-height: 33px;
 	display: inline-block;
 	text-align: center;
-	padding: 3px !important;
+	padding: 2px !important;
 	margin: 3px;
-	font-size: 16px !important;
-	line-height: 12px;
+	line-height: 20px;
 	transition: all 200ms ease;
     border-radius: 0 !important;
+}
+
+.html_entity-box_wrapper:not(button) > button:not(.button-toolbar-a):not(.unstyled):not(.spinbuttons-button).html_entity-item .button-text {
+	font-size: 16px;
 }
 
 .html_entity-box_wrapper .html_entity-item.transparent {

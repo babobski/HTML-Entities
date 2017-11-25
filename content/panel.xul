@@ -16,14 +16,14 @@
 - for the specific language governing rights and limitations under the
 - License.
 -
-- The Original Code is Qwin extension.
+- The Original Code is HTML Entities panel.
 -
-- The Initial Developer of the Original Code is Ondrej Donek.
+- The Initial Developer of the Original Code is Bob de Haas.
 - Portions created by the Initial Developer are Copyright (C) 2008
 - the Initial Developer. All Rights Reserved.
 -
 - Contributor(s):
--   Ondrej Donek, <ondrejd@gmail.com> (Original Author)
+-   Bob de Haas, <info@babobski.nl> (Original Author)
 -
 - Alternatively, the contents of this file may be used under the terms of
 - either the GNU General Public License Version 2 or later (the "GPL"), or
@@ -39,7 +39,7 @@
 -
 - ***** END LICENSE BLOCK ***** -->
 
-<page xmlns:html="http://www.w3.org/1999/xhtml" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<page xmlns:html="http://www.w3.org/1999/xhtml" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" onload="setPrefEntities();">
 	<script type="application/x-javascript" src="chrome://HTMLtoolbox/content/overlay.js" />
 
 	<vbox id="HTMLtoolbox-first-tabpanel-vbox" flex="1" align="left" class="toolbar-box">
@@ -143,6 +143,37 @@
 			<button class="html_entity-item" tooltiptext="yen" onclick="html_entity_insert('yen',165);" label="¥"/>
 			<button class="html_entity-item" tooltiptext="euro" onclick="html_entity_insert('euro',8364);" label="€"/>
 		</html:div>
+		
+		<html:div class="html_entity-box_title">Arrows</html:div>
+		<html:div class="html_entity-box_wrapper">
+			<button class="html_entity-item" tooltiptext="Left arrow" onclick="html_entity_insert('larr',8592);" label="←"/>
+			<button class="html_entity-item" tooltiptext="Up arrow" onclick="html_entity_insert('uarr',8593);" label="↑"/>
+			<button class="html_entity-item" tooltiptext="Right arrow" onclick="html_entity_insert('rarr',8594);" label="→"/>
+			<button class="html_entity-item" tooltiptext="Down arrow" onclick="html_entity_insert('darr',165);" label="↓"/>
+			<button class="html_entity-item" tooltiptext="Left right arrow" onclick="html_entity_insert('harr',8596);" label="↔"/>
+			<button class="html_entity-item" tooltiptext="Up down arrow" onclick="html_entity_insert('varr',8597);" label="↔"/>
+			<button class="html_entity-item" tooltiptext="Left double arrow" onclick="html_entity_insert('lArr', 8656);" label="⇐"/>
+			<button class="html_entity-item" tooltiptext="Up double arrow" onclick="html_entity_insert('uArr',8657);" label="⇑"/>
+			<button class="html_entity-item" tooltiptext="Right double arrow" onclick="html_entity_insert('rArr',8658);" label="⇒"/>
+			<button class="html_entity-item" tooltiptext="Down double arrow" onclick="html_entity_insert('dArr',8659);" label="⇓"/>
+			<button class="html_entity-item" tooltiptext="Left right double arrow" onclick="html_entity_insert('hArr',8660);" label="⇔"/>
+			<button class="html_entity-item" tooltiptext="Up down double arrow" onclick="html_entity_insert('vArr',8661);" label="⇕"/>
+			<button class="html_entity-item" tooltiptext="Leftwards open-headed arrow" onclick="html_entity_insert('loarr',8701);" label="⇽"/>
+			<button class="html_entity-item" tooltiptext="Rightwards open-headed arrow" onclick="html_entity_insert('roarr',8702);" label="⇽"/>
+			<button class="html_entity-item" tooltiptext="Left right open-headed arrow" onclick="html_entity_insert('hoarr',8703);" label="⇿"/>
+			<button class="html_entity-item" tooltiptext="Long leftwards arrow" onclick="html_entity_insert('xlarr',10229);" label="⟵"/>
+			<button class="html_entity-item" tooltiptext="Long rightwards arrow" onclick="html_entity_insert('xrarr',10230);" label="⟶"/>
+			<button class="html_entity-item" tooltiptext="Long left right arrow" onclick="html_entity_insert('xharr',10230);" label="⟷"/>
+			<button class="html_entity-item" tooltiptext="Long rightwards squiggle arrow" onclick="html_entity_insert('dzigrarr',10239);" label="⟿"/>
+			<button class="html_entity-item" tooltiptext="Leftwards double dash arrow" onclick="html_entity_insert('lbarr',10508);" label="⤌"/>
+			<button class="html_entity-item" tooltiptext="Rightwards double dash arrow" onclick="html_entity_insert('rbarr',10509);" label="⤍"/>
+			<button class="html_entity-item" tooltiptext="Rightwards arrow with dotted stem" onclick="html_entity_insert('DDotrahd',10513);" label="⤑"/>
+			<button class="html_entity-item" tooltiptext="Arrow pointing rightwards then curving downwards" onclick="html_entity_insert('cudarrr',10549);" label="⤵"/>
+			<button class="html_entity-item" tooltiptext="Arrow pointing downwards then curving leftwards" onclick="html_entity_insert('ldca',10550);" label="⤶"/>
+			<button class="html_entity-item" tooltiptext="Arrow pointing downwards then curving rightwards" onclick="html_entity_insert('rdca',10551);" label="⤷"/>
+			<button class="html_entity-item" tooltiptext="Right-side arc clockwise arrow" onclick="html_entity_insert('cudarrl',10552);" label="⤸"/>
+			<button class="html_entity-item" tooltiptext="Left-side arc anticlockwise arrow" onclick="html_entity_insert('larrpl',10553);" label="⤹"/>
+		</html:div>
 
 
 		<html:div class="html_entity-box_title">special chars</html:div>
@@ -181,6 +212,7 @@
 			<button class="html_entity-item" tooltiptext="fraction 1/2" onclick="html_entity_insert('frac12',189);" label="½"/>
 			<button class="html_entity-item" tooltiptext="fraction 2/3" onclick="html_entity_insert('frac23',8532);" label="⅔"/>
 			<button class="html_entity-item" tooltiptext="fraction 3/4" onclick="html_entity_insert('frac34',190);" label="¾"/>
+			<button class="html_entity-item" tooltiptext="Numero sign" onclick="html_entity_insert('numero',8470);" label="№"/>
 			<button class="html_entity-item" tooltiptext="multiplication" onclick="html_entity_insert('times',215);" label="×"/>
 			<button class="html_entity-item" tooltiptext="division" onclick="html_entity_insert('divide',247);" label="÷"/>
 			<button class="html_entity-item" tooltiptext="Latin small f with hook (function, florin)" onclick="html_entity_insert('fnof',402);" label="ƒ"/>
@@ -230,6 +262,10 @@
 			<button class="html_entity-item" tooltiptext="Hash" onclick="html_entity_insert('sharp',9839);" label="♯"/>
 			<button class="html_entity-item" tooltiptext="Check" onclick="html_entity_insert('check',9742);" label="✓"/>
 			<button class="html_entity-item" tooltiptext="Cross" onclick="html_entity_insert('cross',10007);" label="✗"/>
+			<button class="html_entity-item" tooltiptext="Full block" onclick="html_entity_insert('block',9608);" label="█"/>
+			<button class="html_entity-item" tooltiptext="Light shade" onclick="html_entity_insert('blk14',9617);" label="░"/>
+			<button class="html_entity-item" tooltiptext="Medium shade" onclick="html_entity_insert('blk12',9617);" label="▒"/>
+			<button class="html_entity-item" tooltiptext="Dark shade" onclick="html_entity_insert('blk34',9619);" label="▓"/>
 		</html:div>
 
 		<html:div class="html_entity-box_title">Greek</html:div>
